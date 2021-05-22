@@ -4,29 +4,34 @@
 <html>
 <head>
     <title>Login: Todo List</title>
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 </head>
 <body>
-    <h1>Login: Todo List</h1>
-<br/>
-    <div>
-        <h2>Login</h2>
-        <form method="post" action="autenticar">
-            <div>
-                <label for="user">Username</label>
-                <input type="text" placeholder="Entre com o usuário" name="user" id="user">
+    <div class="text-center mt-5">
+        <form method="post" action="autenticar" style="max-width: 480px; margin: auto">
+            <img class="mt-4 mb-4" src="https://img-premium.flaticon.com/png/512/1/1560.png?token=exp=1621721793~hmac=3bb73d050fdf23c1000480288c0af5ea" alt="todo-logo" height="72">
+            <h1 class="h3 mb-3 font-weight-normal">To Do List: Please sign in</h1>
+                <input class="form-control mb-3" type="text" placeholder="User" name="user" id="user" required autofocus>
+                <input class="form-control" type="password" placeholder="Password" name="password" id="password">
 
-                <label for="password">Password</label>
-                <input type="password" placeholder="Entre com a senha" name="password" id="password">
-
-                <button type="submit">Login</button>
-            </div>
+                <div class="mt-3">
+                    <button class="btn btn-lg btn-primary btn-block" type="submit" style="width: 100%">Sign in</button>
+                </div>
             <div>
-                <span>Novo usuário</span>
+                <h1 class="h4 mt-3 font-weight-normal">New in To Do List?  <a href="sigInPage.jsp">Create an account</a></h1>
             </div>
         </form>
     </div>
+
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+    -->
 
 </body>
 </html>

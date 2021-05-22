@@ -34,7 +34,7 @@ public class UserDAO {
     }
 
     public void insertUser(User user) {
-        String sql = "INSERT INTO user(name, password) VALUES(?, MD5(?));";
+        String sql = "INSERT INTO users(name, password) VALUES(?, MD5(?));";
         try {
             Connection connection = DataBaseConnection.initializeDataBase();
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
