@@ -25,8 +25,6 @@
     </form>
 </div>
 
-
-
 <script>
     $(".closeMyModal").click(function (e) {
         e.preventDefault();
