@@ -48,7 +48,6 @@ public class ToDoDAO {
             } catch (SQLException e) {
                 e.printStackTrace();
             }
-            preparedStatement.executeUpdate();
             preparedStatement.close();
             connection.close();
         } catch (SQLException | ClassNotFoundException e) {
@@ -66,6 +65,25 @@ public class ToDoDAO {
             preparedStatement.setString(1, todo.getMessage());
 
             preparedStatement.executeUpdate();
+            preparedStatement.close();
+            connection.close();
+        } catch (SQLException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void removeById(int id) {
+        String sql = "DELETE FROM todo WHERE id = ?;";
+        try {
+            Connection connection = DataBaseConnection.initializeDataBase();
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+
+            try {
+                preparedStatement.setInt(1, id);
+                preparedStatement.executeUpdate();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
             preparedStatement.close();
             connection.close();
         } catch (SQLException | ClassNotFoundException e) {

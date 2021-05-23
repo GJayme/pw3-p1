@@ -124,3 +124,7 @@ input {
     background-color: black;
     position: absolute;
 }
+
+.closeMyModal {
+    text-align: right;
+}
