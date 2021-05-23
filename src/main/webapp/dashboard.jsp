@@ -18,17 +18,19 @@
     ArrayList<ToDo> todoList = toDoDAO.getListTodo();
 %>
 
-    <div id="myDIV" class="header" >
-        <h2>My To Do List</h2>
-        <form method="post" action="addNewToDo">
-            <input type="text" id="newTodo" name="newTodo" placeholder="New ToDo...">
-            <span type="submit" class="addBtn">Add</span>
-        </form>
-    </div>
+    <nav class="navbar navbar-dark bg-dark justify-content-between">
+        <h3 href="#" class="navbar-brand"style="color: #FFFFFF; margin-left: 10px">My To Do List</h3>
+        <div style="width: 40%">
+            <form method="post" action="addNewToDo" style="display: flex; width: 100%">
+                <input type="text" id="newTodo" name="newTodo" placeholder="New ToDo..." class="form-control">
+                <button class="btn btn-outline-success my-2 my-sm-0" style="margin-left: 10px; margin-right: 10px" type="submit">Add</button>
+            </form>
+        </div>
+    </nav>
 
     <ul id="myUL">
         <c:forEach var="li" items="<%=todoList%>">
-            <li style="display: flex; justify-content: space-between" >
+            <li>
                 <c:out value="${li.message}"/>
                 <div>
                     <a class="btn btn-lg btn-success btn-block" rel="myModal" href="updateTodo.jsp?id=<c:out value='${li.id}' />">Update</a>
