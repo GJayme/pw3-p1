@@ -31,7 +31,10 @@
     <ul class="list-group list-group-flush">
         <c:forEach var="li" items="<%=todoList%>">
             <li class="list-group-item" style="display: flex; justify-content: space-between">
-                <p><c:out value="${li.message}"/></p>
+                <div style="display: flex">
+                    <input class="form-check-input" type="checkbox" style="margin-right: 20px">
+                    <p><c:out value="${li.message}"/></p>
+                </div>
                 <div>
                     <a class="btn btn-lg btn-success btn-block" rel="myModal" href="updateTodo.jsp?id=<c:out value='${li.id}' />">Update</a>
                     <a class="btn btn-lg btn-danger btn-block" rel="myModal" href="deleteTodo.jsp?id=<c:out value='${li.id}'/>">Delete</a>
@@ -50,12 +53,5 @@
 
 <!-- Option 1: Bootstrap Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
-
-<!-- Option 2: Separate Popper and Bootstrap JS -->
-<!--
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
--->
-
 </body>
 </html>
