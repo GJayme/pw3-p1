@@ -19,9 +19,8 @@ public class ToDoDAO {
                     todo = new ToDo(rs.getInt("id"), rs.getString("message"));
                     todoList.add(todo);
                 }
-
+                stmt.close();
                 connection.close();
-
             } catch (SQLException e) {
                 e.printStackTrace();
             }
@@ -30,6 +29,32 @@ public class ToDoDAO {
             e.printStackTrace();
         }
         return todoList;
+    }
+
+    public ToDo getToDoById(int id) {
+        ToDo todo = null;
+
+        String sql = "SELECT * from todo WHERE id = ?;";
+        try {
+            Connection connection = DataBaseConnection.initializeDataBase();
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+
+            try {
+                preparedStatement.setInt(1, id);
+                ResultSet rs = preparedStatement.executeQuery();
+                if (rs.next()) {
+                    todo = new ToDo(rs.getInt("id"), rs.getString("message"));
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+            preparedStatement.executeUpdate();
+            preparedStatement.close();
+            connection.close();
+        } catch (SQLException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        return todo;
     }
 
     public void insertNewToDo(ToDo todo) {
