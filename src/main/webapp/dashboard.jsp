@@ -28,10 +28,10 @@
         </div>
     </nav>
 
-    <ul id="myUL">
+    <ul class="list-group list-group-flush">
         <c:forEach var="li" items="<%=todoList%>">
-            <li>
-                <c:out value="${li.message}"/>
+            <li class="list-group-item" style="display: flex; justify-content: space-between">
+                <p><c:out value="${li.message}"/></p>
                 <div>
                     <a class="btn btn-lg btn-success btn-block" rel="myModal" href="updateTodo.jsp?id=<c:out value='${li.id}' />">Update</a>
                     <a class="btn btn-lg btn-danger btn-block" rel="myModal" href="deleteTodo.jsp?id=<c:out value='${li.id}'/>">Delete</a>
