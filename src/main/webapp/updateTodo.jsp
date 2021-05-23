@@ -8,12 +8,23 @@
     ToDo todo = toDoDAO.getToDoById(idTodo);
 %>
 
-<a href="#" class="closeMyModal">X</a>
-<form method="post" action="updateTodo">
-    <input readonly type="text" name="id" id="id" value=<%=todo.getId()%> />
-    <input type="text" id="message" name="message" id="message" placeholder=<%=todo.getMessage()%>/>
-    <button type="submit">Update</button>
-</form>
+<div class="text-center mt-5">
+    <form method="post" action="updateTodo">
+        <div style="display: flex">
+            <label for="id" style="margin-right: 58px">id: </label>
+            <input class="form-control mb-3" readonly type="text" name="id" id="id" value=<%=todo.getId()%> />
+        </div>
+        <div style="display: flex">
+            <label style="margin-right: 5px" for="message">Message:</label>
+            <input class="form-control" type="text" id="message" name="message" id="message" value=<%=todo.getMessage()%> />
+        </div>
+        <div class="mt-3" style="display: flex; justify-content: space-around">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Update</button>
+            <button class="closeMyModal btn btn-outline-danger my-2 my-sm-0">Cancel</button>
+        </div>
+    </form>
+</div>
+
 
 
 <script>
