@@ -14,5 +14,4 @@ public class ServletRemoveToDo extends HttpServlet {
         toDoDAO.removeById(id);
         response.sendRedirect("dashboard.jsp");
     }
-
 }

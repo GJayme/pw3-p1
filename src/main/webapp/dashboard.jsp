@@ -30,7 +30,10 @@
         <c:forEach var="li" items="<%=todoList%>">
             <li style="display: flex; justify-content: space-between" >
                 <c:out value="${li.message}"/>
-                <a rel="myModal" href="deleteTodo.jsp?id=<c:out value='${li.id}'/>"><i class="far fa-trash-alt"></i></a>
+                <div>
+                    <a class="btn btn-lg btn-success btn-block" rel="myModal" href="updateTodo.jsp?id=<c:out value='${li.id}' />">Update</a>
+                    <a class="btn btn-lg btn-danger btn-block" rel="myModal" href="deleteTodo.jsp?id=<c:out value='${li.id}'/>">Delete</a>
+                </div>
             </li>
         </c:forEach>
     </ul>

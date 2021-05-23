@@ -90,4 +90,22 @@ public class ToDoDAO {
             e.printStackTrace();
         }
     }
+
+    public void updateBy(int id, String message) {
+        String sql = "UPDATE todo SET message = ? WHERE id = ?;";
+
+        try {
+            Connection connection = DataBaseConnection.initializeDataBase();
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+
+            preparedStatement.setString(1, message);
+            preparedStatement.setInt(2, id);
+
+            preparedStatement.executeUpdate();
+            preparedStatement.close();
+            connection.close();
+        } catch (SQLException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
 }
