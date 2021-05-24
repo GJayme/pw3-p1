@@ -1,6 +1,6 @@
 <%@ page import="java.util.ArrayList" %>
-<%@ page import="com.example.gabrieljaymep1.ToDo" %>
-<%@ page import="com.example.gabrieljaymep1.ToDoDAO" %>
+<%@ page import="com.example.gabrieljaymep1.entity.ToDo" %>
+<%@ page import="com.example.gabrieljaymep1.persistence.ToDoDAO" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>

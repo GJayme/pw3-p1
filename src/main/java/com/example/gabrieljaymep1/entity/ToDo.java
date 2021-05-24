@@ -1,4 +1,4 @@
-package com.example.gabrieljaymep1;
+package com.example.gabrieljaymep1.entity;
 
 import java.util.Objects;
 

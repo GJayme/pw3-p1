@@ -1,5 +1,5 @@
-<%@ page import="com.example.gabrieljaymep1.ToDoDAO" %>
-<%@ page import="com.example.gabrieljaymep1.ToDo" %>
+<%@ page import="com.example.gabrieljaymep1.persistence.ToDoDAO" %>
+<%@ page import="com.example.gabrieljaymep1.entity.ToDo" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <%

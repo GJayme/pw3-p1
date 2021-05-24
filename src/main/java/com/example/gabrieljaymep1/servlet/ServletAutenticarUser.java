@@ -1,4 +1,7 @@
-package com.example.gabrieljaymep1;
+package com.example.gabrieljaymep1.servlet;
+
+import com.example.gabrieljaymep1.entity.User;
+import com.example.gabrieljaymep1.persistence.UserDAO;
 
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;

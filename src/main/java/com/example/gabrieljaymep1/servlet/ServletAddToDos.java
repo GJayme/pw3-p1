@@ -1,4 +1,7 @@
-package com.example.gabrieljaymep1;
+package com.example.gabrieljaymep1.servlet;
+
+import com.example.gabrieljaymep1.entity.ToDo;
+import com.example.gabrieljaymep1.persistence.ToDoDAO;
 
 import javax.servlet.*;
 import javax.servlet.http.*;

@@ -1,4 +1,6 @@
-package com.example.gabrieljaymep1;
+package com.example.gabrieljaymep1.persistence;
+
+import com.example.gabrieljaymep1.entity.ToDo;
 
 import java.sql.*;
 import java.util.ArrayList;

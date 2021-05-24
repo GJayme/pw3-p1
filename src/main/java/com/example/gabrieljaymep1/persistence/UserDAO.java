@@ -1,4 +1,6 @@
-package com.example.gabrieljaymep1;
+package com.example.gabrieljaymep1.persistence;
+
+import com.example.gabrieljaymep1.entity.User;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
